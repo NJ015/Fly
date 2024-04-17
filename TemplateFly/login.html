@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <form action="login.php" method="POST" id="login-form">
+                <h1>Welcome Back!</h1>
+                <div class="input-box"><input type="text" placeholder="Username" id="un" name="username" required>
+                <i class="fa-solid fa-user"></i></a></div>
+                <div class="input-box"><input type="password" placeholder="Password" id="pass" name="password" required>
+                <i class="fa-solid fa-lock"></i></div>
+                <br>
+                <input type="button" class="btn" value="Login" onclick="login()">
+                <input type="button" class="btn" value="Cancel" style="color: gray;" onclick="ClearForm()">
+            <div class="register">
+            <p>Don't have an account? <a href="SignUp.html">Sign Up</a> </p>
+            </div>
+        </form>
+        </div>
+
+        <script>
+            function login(){
+                var un = document.getElementById("un").value;
+                var pass = document.getElementById("pass").value;
+
+                if ((un == "") || (pass == "")){
+                    alert("You must fill in the username and the password!");
+                }
+                else{
+                    document.getElementById("login-form").submit();
+                }
+            }
+
+            function ClearForm(){ // to clear the form
+                document.getElementById("un").value="";
+                document.getElementById("pass").value="";
+            }
+        </script>
+    </body>
+</html>

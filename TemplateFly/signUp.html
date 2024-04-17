@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="css/styleSign.css"> 
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <form action="signUp.php" method="POST" name="signup-form">
+                <h1>Let's get started!</h1>
+                <div class="input-box">
+                    <div class="input-field">
+                        <label for="fn">Full Name</label>
+                        <br>
+                        <input type="text" placeholder="John Doe" name="fullname" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="un">Username</label>
+                        <br>
+                        <input type="text" placeholder="john.doe" name="username" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="gender">Gender</label>
+                        <br>
+                        <input type="text" placeholder="Male/Female" name="gender">  
+                    </div>
+                    <div class="input-field">
+                        <label for="dob">Date of Birth </label>
+                        <br>
+                        <input type="date" name="dob" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="pass">Password</label>
+                        <br>
+                        <input type="password" placeholder="Password"  name="password" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="pass">Confirm Password</label>
+                        <br>
+                        <input type="password" placeholder="Confirm Password" name="confirmPassword" required>
+                    </div> 
+                </div>
+
+                <div>
+                    <label><input type="checkbox" name="captcha"> I hereby declare that the above information provided is true and correct</label>
+                </div>
+                <input type="button" class="btn" value="Register" onclick="SignUp()" >
+                <input type="button" class="btn" value="Cancel"  onclick="ClearForm()" style="color: rgb(148, 145, 145);">
+            </form>
+        </div>
+
+    <script>
+        function SignUp(){
+            var mForm=document.querySelector("form[name='signup-form']");
+            var fn=mForm.elements["fullname"].value;
+            var un=mForm.elements["username"].value;
+            var gender=mForm.elements["gender"].value;
+            var pass=mForm.elements["password"].value;
+            var confPass=mForm.elements["confirmPassword"].value;
+            var captcha=mForm.elements["captcha"].checked;
+            console.log("fn:"+fn);
+            console.log("un:"+un);
+            console.log("pass:"+pass);
+            console.log("confPass:"+confPass);
+            console.log("gender:"+gender);
+            console.log("captcha:"+captcha);
+
+        if ((pass!=confPass)||(pass==""))
+            alert("Passwords must be equal.");
+
+        if (gender.toLowerCase() != "male" && gender.toLowerCase() != "female"){
+            alert("Gender must be Male or Female!");
+        }
+        else
+            mForm.submit(); 
+        }
+
+        function ClearForm(){
+            var mForm = document.querySelector("form[name='signup-form']");
+            mForm.elements["fullname"].value="";
+            mForm.elements["username"].value="";
+            mForm.elements["gender"].value="";
+            mForm.elements["dob"].value="";
+            mForm.elements["password"].value="";
+            mForm.elements["confirmPassword"].value="";
+            mForm.elements["captcha"].checked=false;
+        }
+    </script>
+    </body>
+</html>
