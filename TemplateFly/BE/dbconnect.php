@@ -29,11 +29,44 @@ function setupDatabase($conn) {
     }
 }
 
-$conn = connectDatabase();
-setupDatabase($conn);
-// Close the database connection
-$conn->close();
+        
+//after <?php:
+// $conn = connectDatabase();
+// setupDatabase($conn);
+//before ?\> ie, at the end of the file before php closing tag
+// $conn->close();
+            
+           //\\
+          //  \\
+         //    \\
+        //      \\
+       //========\\
+//Use the following 3 php codes:
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Foget about the part below
 //Printing all tables:
 // // Array to store table names
 // $tables = array(
