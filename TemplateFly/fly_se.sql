@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 20, 2024 at 04:09 PM
+-- Generation Time: Apr 21, 2024 at 11:55 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -132,6 +132,7 @@ CREATE TABLE IF NOT EXISTS `flights` (
   `destination` varchar(100) NOT NULL,
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
+  `Available_seats` int NOT NULL,
   PRIMARY KEY (`flight_nb`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -139,10 +140,10 @@ CREATE TABLE IF NOT EXISTS `flights` (
 -- Dumping data for table `flights`
 --
 
-INSERT INTO `flights` (`flight_nb`, `source`, `destination`, `date`, `time`) VALUES
-(1, 'New York', 'Los Angeles', '2024-05-01', '08:00:00'),
-(2, 'London', 'Paris', '2024-05-02', '10:30:00'),
-(3, 'Tokyo', 'Sydney', '2024-05-03', '12:45:00');
+INSERT INTO `flights` (`flight_nb`, `source`, `destination`, `date`, `time`, `Available_seats`) VALUES
+(1, 'New York', 'Los Angeles', '2024-05-01', '08:00:00', 100),
+(2, 'London', 'Paris', '2024-05-02', '10:30:00', 30),
+(3, 'Tokyo', 'Sydney', '2024-05-03', '12:45:00', 76);
 
 -- --------------------------------------------------------
 
