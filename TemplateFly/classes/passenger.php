@@ -8,18 +8,22 @@ class Passenger {
         $this->feedback = $feedback;
     }
 
-    public function bookTicket($ticket_id) {
-        // implementation to book a ticket
+    public function bookTicket($id) {
+        //available seats - 1 bil specific flight
+        //save the reserved seat in the name of that passenger
+        //ticket generation + send confirmation msg(email/sms)
     }
 
     public function cancelTicket($ticket_id) {
-        // Implementation to cancel a ticket
+        //available seats + 1 bil specific flight
+        //remove the reserved seat in the name of that passenger
     }
 
-    public function editReservation() {
-        // Implementation to edit reservation details
-        // This method might need additional parameters
-    }
+    //one-way so no need to edit==> cancel then book again
+    // public function editReservation() {
+    //     // Implementation to edit reservation details
+    //     // This method might need additional parameters
+    // }
 
     // public function itSupport() {
     //     // Implementation for IT support related functionalities
