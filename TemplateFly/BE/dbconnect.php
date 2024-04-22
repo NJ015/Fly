@@ -30,18 +30,18 @@ function setupDatabase($conn) {
 }
 
         
-//after <?php:
+// //after <?php:
 // $conn = connectDatabase();
 // setupDatabase($conn);
-//before ?\> ie, at the end of the file before php closing tag
-// $conn->close();
+// //before ?\> ie, at the end of the file before php closing tag
+// // $conn->close();
             
-           //\\
-          //  \\
-         //    \\
-        //      \\
-       //========\\
-//Use the following 3 php codes:
+//            //\\
+//           //  \\
+//          //    \\
+//         //      \\
+//        //========\\
+// //Use the following 3 php codes:
 
 
 
@@ -68,7 +68,7 @@ function setupDatabase($conn) {
 
 //Foget about the part below
 //Printing all tables:
-// // Array to store table names
+// Array to store table names
 // $tables = array(
 //     'profiles', 'flights', 'passengers', 'tickets', 'companies',
 //     'services', 'airplanes', 'shipments', 'payments', 'employees',
@@ -116,4 +116,4 @@ function setupDatabase($conn) {
 //     $headersPrinted = false;
 // }
 
-?>
+// // ?>
