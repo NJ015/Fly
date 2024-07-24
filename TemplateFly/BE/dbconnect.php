@@ -1,6 +1,6 @@
 <?php
 
-function connectDatabase() {
+function   connectDatabase() {
     $dbHost = 'localhost';
     $dbUser = 'root';
     $dbPass = '';
